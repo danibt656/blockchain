@@ -1,4 +1,5 @@
 const SHA256 = require('crypto-js/sha256')
+const transaction = require('./transaction.js')
 
 /**
  *  Clase para un bloque
@@ -62,6 +63,8 @@ class BlockChain {
     return true;
   }
 }
+
+t = new transaction.Transaction('Mie', 'David', 12.4);
 
 let nanicoin = new BlockChain('info de genesis', '00');
 nanicoin.addBlock('esta cryptomoneda lo va a petar');
